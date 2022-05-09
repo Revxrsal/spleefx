@@ -14,7 +14,6 @@ function StatsPage() {
 			.limit(1)
 			.single()
 			.then(v => {
-				console.log(v)
 				if (v.body)
 					setContent(v.body.content)
 			})
