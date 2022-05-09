@@ -6,22 +6,24 @@ import GameStats from "../../components/stats/GameStats";
 function StatsPage() {
 	const router = useRouter()
 	const {id} = router.query
+	console.log(router.query)
 	const [content, setContent] = useState()
 	useEffect(() => {
-		supabase.from("stats")
-			.select("content")
-			.eq("id", id)
-			.limit(1)
-			.single()
-			.then(v => {
-				if (v.body)
-					setContent(v.body.content)
-			})
+		async function fetchData() {
+			const v = await supabase.from("stats")
+				.select("content")
+				.eq("id", id)
+				.limit(1)
+				.single()
+			if (v.body)
+				setContent(JSON.parse(v.body.content))
+		}
+		fetchData();
 	}, [id])
-	return (
-		<div className="stats_container">
+	return (id &&
+		(<div className="stats_container">
 			{content ? (<GameStats stats={content}></GameStats>) : (<h1>Please wait...</h1>)}
-		</div>
+		</div>)
 	)
 }
 

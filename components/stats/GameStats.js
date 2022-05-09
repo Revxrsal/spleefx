@@ -4,6 +4,7 @@ import TableHead from "./TableHead";
 import TableRow from "./TableRow";
 
 function GameStats({stats}) {
+
 	const modeName = stats.modeName
 	const headers = stats.header
 	const rows = stats.rows
