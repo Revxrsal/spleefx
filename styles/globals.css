@@ -1,16 +1,110 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.stats_container {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+}
+
+.stats_body {
+    min-height: 100vh;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    background-color: rgb(45, 37, 58);
+    background-image: url("https://i.pinimg.com/originals/11/1a/03/111a03133d14214539c96e0f657dff1a.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+table {
+    margin: 80px 12.5%;
+    width: 75%;
+    border-collapse: collapse;
+    /*z-index: 10;*/
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    position: relative;
+}
+
+td {
+    text-align: center;
+    background-color: rgb(34, 34, 34);
+    color: #808080;
+    padding: 20px;
+}
+
+th {
+    padding: 20px;
+    font-family: Lato, serif;
+    color: #62b7fd;
+    background-color: rgb(57, 57, 57);
+    text-transform: uppercase;
+}
+
+table th:first-child {
+    border-top-left-radius: 10px;
+}
+
+table th:last-child {
+    border-top-right-radius: 10px;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.mode {
+    color: rgb(2, 255, 242);
+    font-size: 70px;
+    position: relative;
+    display: inline-block;
+    top: 40px;
+}
+
+.modeName {
+    font-family: "Lato", serif;
+    text-align: center;
+}
+
+.ip {
+    background-color: #181A1B;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+    width: 375px;
+    position: relative;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    color: white;
+    margin: 40px auto auto;
+}
+
+.win-status {
+    /*font-weight: bold;*/
+}
+
+.winner {
+    color: limegreen;
+}
+
+.loser {
+    color: red;
 }
