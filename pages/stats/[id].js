@@ -6,7 +6,6 @@ import GameStats from "../../components/stats/GameStats";
 function StatsPage() {
 	const router = useRouter()
 	const {id} = router.query
-	console.log(router.query)
 	const [content, setContent] = useState()
 	useEffect(() => {
 		async function fetchData() {
