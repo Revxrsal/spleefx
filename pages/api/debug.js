@@ -5,7 +5,6 @@ import {supabase} from "../../components/supabase";
 export default async function handler(req, res) {
 	const {id} = req.query
 	if (id) {
-		console.log("user: " + supabase.auth.session())
 		const v = await supabase.from("debug")
 			.select("*")
 			.eq("id", id)
